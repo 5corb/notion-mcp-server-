@@ -1,7 +1,8 @@
 # Notion MCP Server
 
-Simple MCP-compatible server for Notion.
+This is a simple MCP-compatible server for Notion.
 
-- `/` → health check  
-- `/manifest.json` → MCP manifest  
-- `/openapi.json` → placeholder OpenAPI spec  
+## Endpoints
+- `/` → Health check
+- `/manifest.json` → MCP manifest
+- `/openapi.json` → OpenAPI spec

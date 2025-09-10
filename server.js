@@ -15,12 +15,12 @@ app.get("/manifest.json", (req, res) => {
     auth: { type: "none" },
     api: {
       type: "openapi",
-      url: `${req.protocol}://${req.get("host")}/openapi.json`
+      url: `https://${req.get("host")}/openapi.json`
     }
   });
 });
 
-// OpenAPI spec (임시 빈 JSON)
+// OpenAPI spec endpoint
 app.get("/openapi.json", (req, res) => {
   res.json({
     openapi: "3.0.0",
@@ -39,5 +39,5 @@ app.get("/", (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`MCP server listening on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });
